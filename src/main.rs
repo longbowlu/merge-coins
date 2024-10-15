@@ -75,13 +75,13 @@ async fn main() -> anyhow::Result<()> {
         let effects = resp.effects.unwrap();
         let rebate = effects.gas_cost_summary().net_gas_usage();
         gas_obj = effects.gas_object().reference.to_object_ref();
-        println!("merged {len2} coins and got back {} SUI", rebate / -1_000_000_000);
+        println!("merged {len2} coins and got back {} mist", rebate);
         total_rebate += rebate;
         if len1 < 512 {
             println!("Done.");
             break;
         }
     }
-    println!("Got back {} Sui in total", total_rebate / -1_000_000_000);
+    println!("Got back {} Sui in total", total_rebate as f32 * 1.0 / -1_000_000_000.0);
     Ok(())
 }
