@@ -1,0 +1,22 @@
+[package]
+name = "merge-coins"
+version = "0.1.0"
+license = "Apache-2.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.71"
+tap = "1.0.1"
+serde = { version = "1.0.144", features = ["derive"] }
+serde_json = { version = "1.0.0" }
+fastcrypto = { git = "https://github.com/MystenLabs/fastcrypto", rev = "c050ffc78b93739328af5d59b05f90e0e26b1b7e" }
+tokio = "1.36.0"
+futures = "0.3.30"
+clap = { version = "4.4", features = ["derive", "wrap_help"] }
+tracing = "0.1.37"
+hex = "0.4.3"
+sui-types = { git = "https://github.com/MystenLabs/sui/", rev = "5d1857ef161548139af319e8f65ab7f2edec33a9" }
+sui-keys = { git = "https://github.com/MystenLabs/sui/", rev = "5d1857ef161548139af319e8f65ab7f2edec33a9" }
+sui-sdk = { git = "https://github.com/MystenLabs/sui/", rev = "5d1857ef161548139af319e8f65ab7f2edec33a9" }
+sui-json-rpc-types = { git = "https://github.com/MystenLabs/sui/", rev = "5d1857ef161548139af319e8f65ab7f2edec33a9" }
